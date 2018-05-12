@@ -1,0 +1,11 @@
+<div class="d-block" *ngIf="messages.length > 0">
+  <div class="d-block">
+  <h4>Messages: <button class="close" (click)="handleClearMsg()">&times;</button></h4>
+  </div>
+  <br />
+  <div class="d-block">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let message of messages">{{ message }}</li>
+    </ul>
+  </div>
+</div>
