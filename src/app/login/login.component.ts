@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   }
   handleLogout() {
     this.loginResponse = '';
+    this.loginService.logout();
     this.messageService.add('You are now logged out.');
   }
 

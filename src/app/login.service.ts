@@ -7,6 +7,11 @@ export class LoginService {
   constructor() { }
 
   login(username: string, password: string) {
-    return btoa(username + ':' + password);
+    const response = btoa(username + ':' + password);
+    sessionStorage.setItem('loggedIn', response);
+    return response;
+  }
+  logout(): void {
+    sessionStorage.removeItem('loggedIn');
   }
 }
